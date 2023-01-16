@@ -1,6 +1,6 @@
 package master.koitoyuu;
 
-import master.koitoyuu.utils.EncryptThread;
+import master.koitoyuu.utils.DecryptThread;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -17,12 +17,12 @@ public class Main {
                 List<File> files = new ArrayList<>();
                 getAllFile(file,files);
                 for (File file1 : files) {
-                    new EncryptThread(file1).run();
+                    new DecryptThread(file1).run();
                 }
-                System.out.println("[信息] 嗯哼 加密完成呐~");
+                System.out.println("[信息] 嗯哼 解密完成呐~");
             } else if (file.isFile()) {
-                new EncryptThread(file).run();
-                System.out.println("[信息] 嗯哼 加密完成呐~");
+                new DecryptThread(file).run();
+                System.out.println("[信息] 嗯哼 解密完成呐~");
             } else {
                 System.out.println("[信息] 卧槽 这是歌姬吧!");
             }

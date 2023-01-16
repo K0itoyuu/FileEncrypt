@@ -19,10 +19,10 @@ public class Main {
                 for (File file1 : files) {
                     new EncryptThread(file1).run();
                 }
-                System.out.println("[信息] 嗯哼 解密完成呐~");
+                System.out.println("[信息] 嗯哼 加密完成呐~");
             } else if (file.isFile()) {
                 new EncryptThread(file).run();
-                System.out.println("[信息] 嗯哼 解密完成呐~");
+                System.out.println("[信息] 嗯哼 加密完成呐~");
             } else {
                 System.out.println("[信息] 卧槽 这是歌姬吧!");
             }
